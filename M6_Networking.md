@@ -227,7 +227,7 @@ services in a Kubernetes cluster.
 <td><ol type="1">
 <li></li>
 </ol></td>
-<td><img src="./media/image1.png" style="width:0.55208in;height:0.55208in" />A service is an abstraction for pods, providing a stable, so called virtual IP (VIP) address. While pods may come and go and with it their IP addresses, a service allows clients to reliably connect to the containers running in the pod using the VIP. The virtual in VIP means it is not an actual IP address connected to a network interface, but its purpose is purely to forward traffic to one or more pods. Keeping the mapping between the VIP and the pods up-to-date is the job of <a href="https://kubernetes.io/docs/admin/kube-proxy/">kube-proxy</a>, a process that runs on every node, which queries the API server to learn about new services in the cluster.</td>
+<td><img src="M6_Networking/media/image1.png" style="width:0.55208in;height:0.55208in" />A service is an abstraction for pods, providing a stable, so called virtual IP (VIP) address. While pods may come and go and with it their IP addresses, a service allows clients to reliably connect to the containers running in the pod using the VIP. The virtual in VIP means it is not an actual IP address connected to a network interface, but its purpose is purely to forward traffic to one or more pods. Keeping the mapping between the VIP and the pods up-to-date is the job of <a href="https://kubernetes.io/docs/admin/kube-proxy/">kube-proxy</a>, a process that runs on every node, which queries the API server to learn about new services in the cluster.</td>
 </tr>
 <tr class="even">
 <td><ol start="2" type="1">

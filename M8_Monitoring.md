@@ -48,7 +48,7 @@ In this task, you will add the Dashboard to your Kubernetes Cluster.
 </ol></td>
 <td><p>Open a browser and visit the following website:</p>
 <p><a href="http://localhost:8082/api/v1/namespaces/kube-dashboard/services/https:kubernetes-dashboard:/proxy/">http://localhost:8082/api/v1/namespaces/kube-dashboard/services/https:kubernetes-dashboard:/proxy/</a></p>
-<p><img src="./media/image1.png" style="width:5.58434in;height:2.53958in" /></p></td>
+<p><img src="M8_Monitoring/media/image1.png" style="width:5.58434in;height:2.53958in" /></p></td>
 </tr>
 <tr class="even">
 <td><ol start="4" type="1">
@@ -71,14 +71,14 @@ In this task, you will add the Dashboard to your Kubernetes Cluster.
 <li></li>
 </ol></td>
 <td><p>Go back to your browser and paste the token information (use a notepad to make sure it’s the right information):</p>
-<p><img src="./media/image2.png" style="width:5.83333in;height:2.77778in" /></p></td>
+<p><img src="M8_Monitoring/media/image2.png" style="width:5.83333in;height:2.77778in" /></p></td>
 </tr>
 <tr class="odd">
 <td><ol start="7" type="1">
 <li></li>
 </ol></td>
 <td><p>Verify that the dashboard appears:</p>
-<p><img src="./media/image3.png" style="width:5.88264in;height:3.56528in" /></p></td>
+<p><img src="M8_Monitoring/media/image3.png" style="width:5.88264in;height:3.56528in" /></p></td>
 </tr>
 <tr class="even">
 <td><ol start="8" type="1">
@@ -91,14 +91,14 @@ In this task, you will add the Dashboard to your Kubernetes Cluster.
 <li></li>
 </ol></td>
 <td><p>Click the plus sign to add a resource:</p>
-<p><img src="./media/image4.png" style="width:2.86111in;height:2.875in" /></p></td>
+<p><img src="M8_Monitoring/media/image4.png" style="width:2.86111in;height:2.875in" /></p></td>
 </tr>
 <tr class="even">
 <td><ol start="10" type="1">
 <li></li>
 </ol></td>
 <td><p>Paste in the content from the alpine.yaml file from your ~/k8s/courses folder.</p>
-<p><img src="./media/image5.png" style="width:2.04168in;height:2.52085in" /></p></td>
+<p><img src="M8_Monitoring/media/image5.png" style="width:2.04168in;height:2.52085in" /></p></td>
 </tr>
 <tr class="odd">
 <td><ol start="11" type="1">
@@ -111,7 +111,7 @@ In this task, you will add the Dashboard to your Kubernetes Cluster.
 <li></li>
 </ol></td>
 <td><p>The Dashboard should redirect to the Workloads page with the Alpine Pod running.</p>
-<p><img src="./media/image6.png" style="width:5.15629in;height:2.65106in" /></p></td>
+<p><img src="M8_Monitoring/media/image6.png" style="width:5.15629in;height:2.65106in" /></p></td>
 </tr>
 <tr class="odd">
 <td><ol start="13" type="1">

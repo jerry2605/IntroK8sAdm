@@ -33,20 +33,20 @@ create a user, and install kubectl on Windows.
 <td><ol type="1">
 <li></li>
 </ol></td>
-<td><img src="./media/image1.png" style="width:0.55208in;height:0.55208in" />Note: All the command references and architectural details are available on the official Kubernetes Website: <a href="https://kubernetes.io/docs/home/">https://kubernetes.io/docs/home/</a></td>
+<td><img src="M2_Introduction/media/image1.png" style="width:0.55208in;height:0.55208in" />Note: All the command references and architectural details are available on the official Kubernetes Website: <a href="https://kubernetes.io/docs/home/">https://kubernetes.io/docs/home/</a></td>
 </tr>
 <tr class="even">
 <td><ol start="2" type="1">
 <li></li>
 </ol></td>
-<td><img src="./media/image2.png" style="width:0.55208in;height:0.55208in" />Remember you created an alias “k” for “kubectl”. In the following lab exercises, you can use k instead of kubectl.</td>
+<td><img src="M2_Introduction/media/image2.png" style="width:0.55208in;height:0.55208in" />Remember you created an alias “k” for “kubectl”. In the following lab exercises, you can use k instead of kubectl.</td>
 </tr>
 <tr class="odd">
 <td><ol start="3" type="1">
 <li></li>
 </ol></td>
 <td><p>Using Putty, open an SSH connection to rhel3, your Kubernetes master node:</p>
-<p><img src="./media/image3.png" style="width:4.00952in;height:3.92082in" /></p></td>
+<p><img src="M2_Introduction/media/image3.png" style="width:4.00952in;height:3.92082in" /></p></td>
 </tr>
 <tr class="even">
 <td><ol start="4" type="1">
@@ -68,7 +68,7 @@ create a user, and install kubectl on Windows.
 </ol></td>
 <td><p>Review the Kubernetes configuration:</p>
 <p>kubectl config view</p>
-<p><img src="./media/image2.png" style="width:0.55208in;height:0.55208in" /></p>
+<p><img src="M2_Introduction/media/image2.png" style="width:0.55208in;height:0.55208in" /></p>
 <p>If you use multiple kubeconfig files at the same time and you want to merge the views:</p>
 <p>KUBECONFIG=~/.kube/config:~/.kube/kubconfig2 kubectl config view</p></td>
 </tr>
@@ -146,7 +146,7 @@ create a user, and install kubectl on Windows.
 <td><ol start="17" type="1">
 <li></li>
 </ol></td>
-<td><img src="./media/image1.png" style="width:0.48889in;height:0.48889in" />Note: you can use external tools such as kubectx to easily switch between contexts.</td>
+<td><img src="M2_Introduction/media/image1.png" style="width:0.48889in;height:0.48889in" />Note: you can use external tools such as kubectx to easily switch between contexts.</td>
 </tr>
 <tr class="even">
 <td><ol start="18" type="1">
@@ -177,7 +177,7 @@ create a user, and install kubectl on Windows.
 <td><ol start="21" type="1">
 <li></li>
 </ol></td>
-<td><img src="./media/image1.png" style="width:0.55208in;height:0.55208in" />Note: Steps 1-22 through 1-32 are optional. We will now copy the config file of the Kubernetes cluster’s master node rhel3 to the windows jump host. The following procedure is documented here: <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows">https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows</a></td>
+<td><img src="M2_Introduction/media/image1.png" style="width:0.55208in;height:0.55208in" />Note: Steps 1-22 through 1-32 are optional. We will now copy the config file of the Kubernetes cluster’s master node rhel3 to the windows jump host. The following procedure is documented here: <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows">https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows</a></td>
 </tr>
 <tr class="even">
 <td><ol start="22" type="1">
@@ -230,7 +230,7 @@ create a user, and install kubectl on Windows.
 <li></li>
 </ol></td>
 <td><p>Using WinSCP or copy/paste, transfer the “config” file from $HOME/.kube/config on the rhel3 master node to the newly created .kube folder on your windows jump host:</p>
-<p><img src="./media/image4.png" style="width:4.80851in;height:1.35893in" /></p></td>
+<p><img src="M2_Introduction/media/image4.png" style="width:4.80851in;height:1.35893in" /></p></td>
 </tr>
 <tr class="even">
 <td><ol start="30" type="1">
@@ -274,14 +274,14 @@ components using the kubeadm command.
 <td><ol type="1">
 <li></li>
 </ol></td>
-<td><img src="./media/image5.png" style="width:0.55208in;height:0.55208in" />You only can upgrade from one MINOR version to the next MINOR version, or between PATCH versions of the same MINOR. That is, you cannot skip MINOR versions when you upgrade. For example, you can upgrade from 1.y to 1.y+1, but not from 1.y to 1.y+2</td>
+<td><img src="M2_Introduction/media/image5.png" style="width:0.55208in;height:0.55208in" />You only can upgrade from one MINOR version to the next MINOR version, or between PATCH versions of the same MINOR. That is, you cannot skip MINOR versions when you upgrade. For example, you can upgrade from 1.y to 1.y+1, but not from 1.y to 1.y+2</td>
 </tr>
 <tr class="even">
 <td><ol start="2" type="1">
 <li></li>
 </ol></td>
 <td><p>Using Putty, SSH to host rhel3, your master node:</p>
-<p><img src="./media/image3.png" style="width:4.00952in;height:3.92082in" /></p></td>
+<p><img src="M2_Introduction/media/image3.png" style="width:4.00952in;height:3.92082in" /></p></td>
 </tr>
 <tr class="odd">
 <td><ol start="3" type="1">
@@ -409,14 +409,14 @@ components using the kubeadm command.
 <td><ol start="20" type="1">
 <li></li>
 </ol></td>
-<td><p><img src="./media/image2.png" style="width:0.55208in;height:0.55208in" />You kubernetes cluster is now entirely running version 1.15.10.</p>
+<td><p><img src="M2_Introduction/media/image2.png" style="width:0.55208in;height:0.55208in" />You kubernetes cluster is now entirely running version 1.15.10.</p>
 <p>Optionally, you can repeat the steps to upgrade to version 1.16.7. It is not recommended to upgrade to version 1.17.x for stability reasons with Trident.</p></td>
 </tr>
 <tr class="odd">
 <td><ol start="21" type="1">
 <li></li>
 </ol></td>
-<td><img src="./media/image5.png" style="width:0.55208in;height:0.55208in" />Upgrading Kubernetes clusters is long and complex, and there is a lot of possibilities for human errors. That’s why most productive environments implement version control and deployment automation with external tools such as Ansible. Hosted Kubernetes Services such as NetApp Kubernetes Service offer version control and upgrade automation as part of the standard offering and interface.</td>
+<td><img src="M2_Introduction/media/image5.png" style="width:0.55208in;height:0.55208in" />Upgrading Kubernetes clusters is long and complex, and there is a lot of possibilities for human errors. That’s why most productive environments implement version control and deployment automation with external tools such as Ansible. Hosted Kubernetes Services such as NetApp Kubernetes Service offer version control and upgrade automation as part of the standard offering and interface.</td>
 </tr>
 </tbody>
 </table>

@@ -30,7 +30,7 @@ In this task, you will explore the docker CLI.
 <li></li>
 </ol></td>
 <td><p>Using Putty, open an SSH connection to rhel5:</p>
-<p><img src="./media/image1.png" style="width:3.70476in;height:3.6389in" /></p></td>
+<p><img src="M1_Docker_Media/media/image1.png" style="width:3.70476in;height:3.6389in" /></p></td>
 </tr>
 <tr class="even">
 <td><ol start="2" type="1">
@@ -132,7 +132,7 @@ In this task, you will explore the docker CLI.
 </ol></td>
 <td><p>Start a container using the newly downloaded docker image:</p>
 <p>docker run -d --name webserver httpd:2.2</p>
-<p><img src="./media/image2.png" style="width:0.55208in;height:0.55208in" /></p>
+<p><img src="M1_Docker_Media/media/image2.png" style="width:0.55208in;height:0.55208in" /></p>
 <p>The -d option indicates that the container is to run in detached mode rather than in the foreground, so that you will not tie up your command line session while the container is running.</p></td>
 </tr>
 <tr class="even">
@@ -155,14 +155,14 @@ In this task, you will explore the docker CLI.
 <li></li>
 </ol></td>
 <td><p>Now open Chrome on the jump host and browse the rhel5 shortcut:</p>
-<p><img src="./media/image3.png" style="width:2.84762in;height:1.44206in" /></p></td>
+<p><img src="M1_Docker_Media/media/image3.png" style="width:2.84762in;height:1.44206in" /></p></td>
 </tr>
 <tr class="odd">
 <td><ol start="19" type="1">
 <li></li>
 </ol></td>
 <td><p>The following should appear:</p>
-<p><img src="./media/image4.png" style="width:2.77143in;height:3.04704in" /></p></td>
+<p><img src="M1_Docker_Media/media/image4.png" style="width:2.77143in;height:3.04704in" /></p></td>
 </tr>
 <tr class="even">
 <td><ol start="20" type="1">
@@ -213,7 +213,7 @@ and modify the container templates.
 <li></li>
 </ol></td>
 <td><p>Open a browser again and visit the rhel5.demo.netapp.com website, or refresh the previous page:</p>
-<p><img src="./media/image5.png" style="width:3.40952in;height:1.77295in" /></p>
+<p><img src="M1_Docker_Media/media/image5.png" style="width:3.40952in;height:1.77295in" /></p>
 <p>This is the Apache default Webserver page.</p></td>
 </tr>
 <tr class="even">
@@ -222,7 +222,7 @@ and modify the container templates.
 </ol></td>
 <td><p>Now let’s change the contents displayed by our webserver. We will need to enter the container image’s CLI first:</p>
 <p>docker exec -it webserver /bin/bash</p>
-<p><img src="./media/image6.png" style="width:0.55208in;height:0.625in" />Notice the change in the command prompt. The docker exec command runs a command inside a running container. In this example that command is the bash shell, and the combination of the -i and -t options for the exec sub-command indicates that Docker should maintain an interactive tty connection to that bash shell until you explicitly terminate it.</p></td>
+<p><img src="M1_Docker_Media/media/image6.png" style="width:0.55208in;height:0.625in" />Notice the change in the command prompt. The docker exec command runs a command inside a running container. In this example that command is the bash shell, and the combination of the -i and -t options for the exec sub-command indicates that Docker should maintain an interactive tty connection to that bash shell until you explicitly terminate it.</p></td>
 </tr>
 <tr class="odd">
 <td><ol start="5" type="1">
@@ -263,7 +263,7 @@ and modify the container templates.
 <td><ol start="10" type="1">
 <li></li>
 </ol></td>
-<td>Open a browser again and visit the rhel5.demo.netapp.com website, or refresh the previous page:<img src="./media/image7.png" style="width:4.8in;height:1.92335in" /></td>
+<td>Open a browser again and visit the rhel5.demo.netapp.com website, or refresh the previous page:<img src="M1_Docker_Media/media/image7.png" style="width:4.8in;height:1.92335in" /></td>
 </tr>
 <tr class="odd">
 <td><ol start="11" type="1">
@@ -278,7 +278,7 @@ and modify the container templates.
 <li></li>
 </ol></td>
 <td><p>Refresh the website:</p>
-<p><img src="./media/image4.png" style="width:3.06667in;height:3.37164in" /></p></td>
+<p><img src="M1_Docker_Media/media/image4.png" style="width:3.06667in;height:3.37164in" /></p></td>
 </tr>
 <tr class="odd">
 <td><ol start="13" type="1">
@@ -292,7 +292,7 @@ and modify the container templates.
 <li></li>
 </ol></td>
 <td><p>Refresh the website:</p>
-<p><img src="./media/image7.png" style="width:4.8in;height:1.92335in" /></p>
+<p><img src="M1_Docker_Media/media/image7.png" style="width:4.8in;height:1.92335in" /></p>
 <p>This time the page displays properly, demonstrating that the content was preserved across restarts of the hosting container.</p></td>
 </tr>
 <tr class="odd">
@@ -301,7 +301,7 @@ and modify the container templates.
 </ol></td>
 <td><p>Stop and remove the container:</p>
 <p>docker stop webserver &amp;&amp; docker rm webserver</p>
-<p><img src="./media/image6.png" style="width:0.55208in;height:0.55208in" /></p>
+<p><img src="M1_Docker_Media/media/image6.png" style="width:0.55208in;height:0.55208in" /></p>
 <p>Tip: The “&amp;&amp;” syntax in the above command allows you to logically link the execution of two independent commands together. In this example the “docker rm my_www” command will execute only if the “docker stop my_www” completes successfully.</p></td>
 </tr>
 <tr class="even">
@@ -317,7 +317,7 @@ and modify the container templates.
 <td><p>Instantiate a container for the latest httpd:</p>
 <p>docker run -d --name webserver -p 80:80 httpd:latest</p>
 <p>Since the latest httpd container image is not available locally, Docker initiates an image download operation that once finished, instantiates the container.</p>
-<p><img src="./media/image2.png" style="width:0.55208in;height:0.55208in" /></p>
+<p><img src="M1_Docker_Media/media/image2.png" style="width:0.55208in;height:0.55208in" /></p>
 <p>Attention: If you get an error message stating “...lookup index.docker.io: no such host” while running this command, try re-issuing the command. This image gets pulled from a public Docker server that has, on occasion, emitted this error, but the error resolves itself when you re-run the command.</p></td>
 </tr>
 <tr class="even">
@@ -339,7 +339,7 @@ and modify the container templates.
 <li></li>
 </ol></td>
 <td><p>Refresh your browser to verify that the new httpd container is running:</p>
-<p><img src="./media/image8.png" style="width:3.26667in;height:1.44828in" /></p></td>
+<p><img src="M1_Docker_Media/media/image8.png" style="width:3.26667in;height:1.44828in" /></p></td>
 </tr>
 <tr class="odd">
 <td><ol start="21" type="1">
@@ -383,7 +383,7 @@ and modify the container templates.
 <li></li>
 </ol></td>
 <td><p>Refresh the Chrome browser to display <a href="http://rhel5.demo.netapp.com">http://rhel5.demo.netapp.com</a>:</p>
-<p><img src="./media/image8.png" style="width:3.86667in;height:1.71428in" /></p></td>
+<p><img src="M1_Docker_Media/media/image8.png" style="width:3.86667in;height:1.71428in" /></p></td>
 </tr>
 <tr class="odd">
 <td><ol start="27" type="1">
@@ -391,7 +391,7 @@ and modify the container templates.
 </ol></td>
 <td><p>Now from RHEL5, display the contents of the Host volume you mapped inside the container:</p>
 <p>ls /var/lib/docker/volumes/webserver/_data</p>
-<p><img src="./media/image6.png" style="width:0.55208in;height:0.55208in" /></p>
+<p><img src="M1_Docker_Media/media/image6.png" style="width:0.55208in;height:0.55208in" /></p>
 <p>Note: This folder is on your Docker Host, but contains files from your container path specified in step 2-7: /usr/local/apache2/htdocs.</p>
 <p>Those are, for an Apache Webserver, the index.html file.</p></td>
 </tr>
@@ -407,7 +407,7 @@ and modify the container templates.
 <li></li>
 </ol></td>
 <td><p>Refresh Chrome to display the updated Webserver:</p>
-<p><img src="./media/image9.png" style="width:3.66667in;height:1.69365in" /></p></td>
+<p><img src="M1_Docker_Media/media/image9.png" style="width:3.66667in;height:1.69365in" /></p></td>
 </tr>
 <tr class="even">
 <td><ol start="30" type="1">
@@ -436,7 +436,7 @@ and modify the container templates.
 <li></li>
 </ol></td>
 <td><p>Refresh Chrome to display the new Webserver:</p>
-<p><img src="./media/image9.png" style="width:3.66667in;height:1.69365in" /></p></td>
+<p><img src="M1_Docker_Media/media/image9.png" style="width:3.66667in;height:1.69365in" /></p></td>
 </tr>
 <tr class="even">
 <td><ol start="34" type="1">
@@ -471,7 +471,7 @@ registry.
 <li></li>
 </ol></td>
 <td><p>Using Putty, open an SSH connection to rhel5:</p>
-<p><img src="./media/image1.png" style="width:3.70476in;height:3.6389in" /></p></td>
+<p><img src="M1_Docker_Media/media/image1.png" style="width:3.70476in;height:3.6389in" /></p></td>
 </tr>
 <tr class="even">
 <td><ol start="2" type="1">
@@ -521,14 +521,14 @@ registry.
 </ol></td>
 <td><p>Commit the changes you just made to the “my_custom_httpd” image:</p>
 <p>docker commit my_webserver registry.demo.netapp.com/my_webserver:latest</p>
-<p><img src="./media/image6.png" style="width:0.55208in;height:0.55208in" />When you commit the container, you are preserving its state so that it can be re-used to instantiate other container instances. On a commit operation, Docker creates a new local image, but only stores the differences between the container's source image and the container's current state.</p></td>
+<p><img src="M1_Docker_Media/media/image6.png" style="width:0.55208in;height:0.55208in" />When you commit the container, you are preserving its state so that it can be re-used to instantiate other container instances. On a commit operation, Docker creates a new local image, but only stores the differences between the container's source image and the container's current state.</p></td>
 </tr>
 <tr class="odd">
 <td><ol start="9" type="1">
 <li></li>
 </ol></td>
 <td><p>Generate a list of the local images: docker images</p>
-<p><img src="./media/image6.png" style="width:0.55208in;height:0.55208in" />Note the repository name for the newly committed image, “registry.demo.netapp.com/my_webserver_image”. By default, the docker command assumes commits are supposed to go to the main docker hub (hub.docker.com), but this lab exercise utilizes a local docker registry server (registry.demo.netapp.com, which is an alias for rhel4).</p></td>
+<p><img src="M1_Docker_Media/media/image6.png" style="width:0.55208in;height:0.55208in" />Note the repository name for the newly committed image, “registry.demo.netapp.com/my_webserver_image”. By default, the docker command assumes commits are supposed to go to the main docker hub (hub.docker.com), but this lab exercise utilizes a local docker registry server (registry.demo.netapp.com, which is an alias for rhel4).</p></td>
 </tr>
 <tr class="even">
 <td><ol start="10" type="1">
@@ -542,7 +542,7 @@ registry.
 <li></li>
 </ol></td>
 <td><p>Switch to a Putty Session on rhel6:</p>
-<p><img src="./media/image10.png" style="width:3.82857in;height:3.74387in" /></p></td>
+<p><img src="M1_Docker_Media/media/image10.png" style="width:3.82857in;height:3.74387in" /></p></td>
 </tr>
 <tr class="even">
 <td><ol start="12" type="1">
@@ -563,7 +563,7 @@ registry.
 <li></li>
 </ol></td>
 <td><p>In Chrome, open the web page for <a href="http://rhel6.demo.netapp.com">http://rhel6.demo.netapp.com</a>:</p>
-<p><img src="./media/image11.png" style="width:4.02857in;height:1.52681in" /></p>
+<p><img src="M1_Docker_Media/media/image11.png" style="width:4.02857in;height:1.52681in" /></p>
 <p>The web page published by rhel6 matches the customized web page you included in the customized container image you created using rhel5.</p></td>
 </tr>
 <tr class="odd">
@@ -587,7 +587,7 @@ registry.
 <li></li>
 </ol></td>
 <td><p>Exit rhel6 and go back to rhel5.</p>
-<p><img src="./media/image6.png" style="width:0.55208in;height:0.55208in" />Next you will build an image using a Dockerfile. A Dockerfile contains a set of instructions on how to build new images, and the docker build command executes those instructions. Dockerfiles offer a more robust way to build images because they document and automate the build process, which makes it easier to share image development processes among a team.</p></td>
+<p><img src="M1_Docker_Media/media/image6.png" style="width:0.55208in;height:0.55208in" />Next you will build an image using a Dockerfile. A Dockerfile contains a set of instructions on how to build new images, and the docker build command executes those instructions. Dockerfiles offer a more robust way to build images because they document and automate the build process, which makes it easier to share image development processes among a team.</p></td>
 </tr>
 <tr class="even">
 <td><ol start="18" type="1">
@@ -640,7 +640,7 @@ registry.
 <li></li>
 </ol></td>
 <td><p>Refresh the Chrome browser to display <a href="http://rhel5.demo.netapp.com">http://rhel5.demo.netapp.com</a>:</p>
-<p><img src="./media/image12.png" style="width:3.32381in;height:1.51669in" /></p></td>
+<p><img src="M1_Docker_Media/media/image12.png" style="width:3.32381in;height:1.51669in" /></p></td>
 </tr>
 <tr class="odd">
 <td><ol start="25" type="1">
@@ -669,7 +669,7 @@ registry.
 <td><ol start="28" type="1">
 <li></li>
 </ol></td>
-<td><img src="./media/image6.png" style="width:0.55208in;height:0.55208in" />You can now build your own Docker Images based on available images from Docker.io, or private repositories. If you want to try something more complex, you could deploy an Ansible Server in Docker using the ansible/ansible Dockerfile available here: <a href="https://hub.docker.com/r/ansible/ansible/dockerfile">https://hub.docker.com/r/ansible/ansible/dockerfile</a></td>
+<td><img src="M1_Docker_Media/media/image6.png" style="width:0.55208in;height:0.55208in" />You can now build your own Docker Images based on available images from Docker.io, or private repositories. If you want to try something more complex, you could deploy an Ansible Server in Docker using the ansible/ansible Dockerfile available here: <a href="https://hub.docker.com/r/ansible/ansible/dockerfile">https://hub.docker.com/r/ansible/ansible/dockerfile</a></td>
 </tr>
 </tbody>
 </table>

@@ -97,7 +97,7 @@ Kubernetes cluster, and also how to delete a pod.
 <td><ol start="9" type="1">
 <li></li>
 </ol></td>
-<td>Note: When this lab guide needs to reference a specific entry in a YAML file, it uses the “.” character to distinguish the block (i.e., indentation) levels in the YAML output. For example, using the YAML file you examined in this step, “metadata.name” refers to the “name” property inside the “metadata” block.<img src="./media/image1.png" style="width:0.55208in;height:0.55208in" /></td>
+<td>Note: When this lab guide needs to reference a specific entry in a YAML file, it uses the “.” character to distinguish the block (i.e., indentation) levels in the YAML output. For example, using the YAML file you examined in this step, “metadata.name” refers to the “name” property inside the “metadata” block.<img src="M3_Pod_Admin/media/image1.png" style="width:0.55208in;height:0.55208in" /></td>
 </tr>
 <tr class="even">
 <td><ol start="10" type="1">
@@ -118,7 +118,7 @@ Kubernetes cluster, and also how to delete a pod.
 <td><ol start="12" type="1">
 <li></li>
 </ol></td>
-<td><img src="./media/image2.png" style="width:0.55208in;height:0.55208in" />The describe command returns a substantial amount of information about the containers in the pod, including the internal IP address(es), the node(s) used for execution, and a log of events associated with the containers. If any errors occur during container instantiation, they will be listed in the “Events:” section of the output as well.</td>
+<td><img src="M3_Pod_Admin/media/image2.png" style="width:0.55208in;height:0.55208in" />The describe command returns a substantial amount of information about the containers in the pod, including the internal IP address(es), the node(s) used for execution, and a log of events associated with the containers. If any errors occur during container instantiation, they will be listed in the “Events:” section of the output as well.</td>
 </tr>
 <tr class="odd">
 <td><ol start="13" type="1">
@@ -149,7 +149,7 @@ instantiate the pod.
 <td><ol type="1">
 <li></li>
 </ol></td>
-<td><img src="./media/image3.png" style="width:0.55208in;height:0.55208in" />The following tasks are not 100% guided, and you will have to look for specific information in order to create your own YAML files. We will create 3 different YAML files throughout the task. To search for a specific public container image, use the docker hub.</td>
+<td><img src="M3_Pod_Admin/media/image3.png" style="width:0.55208in;height:0.55208in" />The following tasks are not 100% guided, and you will have to look for specific information in order to create your own YAML files. We will create 3 different YAML files throughout the task. To search for a specific public container image, use the docker hub.</td>
 </tr>
 <tr class="even">
 <td><ol start="2" type="1">
@@ -276,7 +276,7 @@ instantiate the pod.
 <li><p>Don’t forget the API Version you want to use</p></li>
 </ul>
 <p>The result will give you something like that:</p>
-<p><img src="./media/image4.png" style="width:5.1743in;height:2.67481in" /></p></td>
+<p><img src="M3_Pod_Admin/media/image4.png" style="width:5.1743in;height:2.67481in" /></p></td>
 </tr>
 <tr class="even">
 <td><ol start="2" type="1">
@@ -767,7 +767,7 @@ startup.
 <td><ol start="26" type="1">
 <li></li>
 </ol></td>
-<td><img src="./media/image1.png" style="width:0.55208in;height:0.55208in" /><em>Note:</em> You could have just added the <strong>mysql-root-password</strong> Secret to the <strong>envFrom</strong> list and let it be parsed as well, as long as the <strong>password</strong> key was named <strong>MYSQL_ROOT_PASSWORD</strong> instead. There is no way to manually specify the environment variable name with <strong>envFrom</strong> as with <strong>env</strong>.</td>
+<td><img src="M3_Pod_Admin/media/image1.png" style="width:0.55208in;height:0.55208in" /><em>Note:</em> You could have just added the <strong>mysql-root-password</strong> Secret to the <strong>envFrom</strong> list and let it be parsed as well, as long as the <strong>password</strong> key was named <strong>MYSQL_ROOT_PASSWORD</strong> instead. There is no way to manually specify the environment variable name with <strong>envFrom</strong> as with <strong>env</strong>.</td>
 </tr>
 <tr class="odd">
 <td><ol start="27" type="1">
@@ -788,7 +788,7 @@ startup.
 <td><ol start="28" type="1">
 <li></li>
 </ol></td>
-<td><img src="./media/image1.png" style="width:0.55208in;height:0.55208in" /><em>Note:</em> This is not a production configuration. When the Pod restarts, the data in the <strong>emptyDir</strong> volume is lost. This is primarily used for development or when the contents of the volume don't need to be persistent.</td>
+<td><img src="M3_Pod_Admin/media/image1.png" style="width:0.55208in;height:0.55208in" /><em>Note:</em> This is not a production configuration. When the Pod restarts, the data in the <strong>emptyDir</strong> volume is lost. This is primarily used for development or when the contents of the volume don't need to be persistent.</td>
 </tr>
 <tr class="odd">
 <td><ol start="29" type="1">
@@ -818,7 +818,7 @@ startup.
 <li></li>
 </ol></td>
 <td><p>The <strong>volumeMount</strong> is pretty self-explanatory—create a volume mount for the <strong>mariadb-config-volume</strong> (specified in the <strong>volumes</strong> list below it) to the path <strong>/etc/mysql/conf.d</strong>.</p>
-<p><img src="./media/image1.png" style="width:0.55208in;height:0.55208in" />Then, in the <strong>volumes</strong> list, <strong>configMap</strong> tells Kubernetes to use the <strong>mariadb-config</strong> ConfigMap, taking the contents of the key <strong>max_allowed_packet.cnf</strong> and mounting it to the path <strong>max_allowed_packed.cnf</strong>. The name of the volume is <strong>mariadb-config-volume</strong>, which was referenced in the <strong>volumeMounts</strong> above.</p>
+<p><img src="M3_Pod_Admin/media/image1.png" style="width:0.55208in;height:0.55208in" />Then, in the <strong>volumes</strong> list, <strong>configMap</strong> tells Kubernetes to use the <strong>mariadb-config</strong> ConfigMap, taking the contents of the key <strong>max_allowed_packet.cnf</strong> and mounting it to the path <strong>max_allowed_packed.cnf</strong>. The name of the volume is <strong>mariadb-config-volume</strong>, which was referenced in the <strong>volumeMounts</strong> above.</p>
 <p><em>Note:</em> The <strong>path</strong> from the <strong>configMap</strong> is the name of a file that will contain the contents of the key's value. In this case, your key was a file name, too, but it doesn't have to be. Note also that <strong>items</strong> is a list, so multiple keys can be referenced and their values mounted as files. These files will all be created in the <strong>mountPath</strong> of the <strong>volumeMount</strong> specified above: <strong>/etc/mysql/conf.d</strong>.</p></td>
 </tr>
 <tr class="odd">
@@ -877,7 +877,7 @@ startup.
 <p>- key: max_allowed_packet.cnf</p>
 <p>path: max_allowed_packet.cnf</p>
 <p>name: mariadb-config-volume</p>
-<p><img src="./media/image3.png" style="width:0.55208in;height:0.55208in" /> <strong>(Note: The file is available on the git you cloned in module 0)</strong></p></td>
+<p><img src="M3_Pod_Admin/media/image3.png" style="width:0.55208in;height:0.55208in" /> <strong>(Note: The file is available on the git you cloned in module 0)</strong></p></td>
 </tr>
 <tr class="odd">
 <td><ol start="33" type="1">
@@ -981,7 +981,7 @@ startup.
 <td><ol start="43" type="1">
 <li></li>
 </ol></td>
-<td><img src="./media/image1.png" style="width:0.55208in;height:0.55208in" />This exercise explained how to create Kubernetes Secrets and ConfigMaps and how to use those Secrets and ConfigMaps by adding them as environment variables or files inside of a running container instance. This makes it easy to keep the configuration of individual instances of containers separate from the container image. By separating the configuration data, overhead is reduced to maintaining only a single image for a specific type of instance while retaining the flexibility to create instances with a wide variety of configurations.</td>
+<td><img src="M3_Pod_Admin/media/image1.png" style="width:0.55208in;height:0.55208in" />This exercise explained how to create Kubernetes Secrets and ConfigMaps and how to use those Secrets and ConfigMaps by adding them as environment variables or files inside of a running container instance. This makes it easy to keep the configuration of individual instances of containers separate from the container image. By separating the configuration data, overhead is reduced to maintaining only a single image for a specific type of instance while retaining the flexibility to create instances with a wide variety of configurations.</td>
 </tr>
 </tbody>
 </table>
