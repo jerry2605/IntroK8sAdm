@@ -1,2 +1,2 @@
 # IntroK8sAdm
-Introduction to Kubernetes Administration Lag Guide
+Introduction to Kubernetes Administration Lab Guide
